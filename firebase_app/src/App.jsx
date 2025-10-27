@@ -4,10 +4,9 @@ import Write from "./components/Write";
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+   
   return (
-    <div className='card'>
+    <div>
         <Router>
           <Routes>
             <Route path="/" element={<Write/>} />
