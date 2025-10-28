@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import app from "../firebaseConfig";
 import { getDatabase, ref, get } from 'firebase/database';
+import { useNavigate } from 'react-router-dom';
+
 
 function Read() {
+    // for navigation
+  const navigate = useNavigate();
+
   const [fruitArray, setFruitArray] = useState([]);
 
   const fetchData = async () => {
@@ -19,6 +24,7 @@ function Read() {
 
   return (
     <div>
+      <h1>Read Data</h1>
       <button onClick={fetchData}>Display Data</button>
       <ul>
         {fruitArray.map((item, index) => (
@@ -27,6 +33,8 @@ function Read() {
           </li>
         ))}
       </ul>
+          <button className='button1' onClick={() => navigate("/")}>Go Home Page</button>
+          <button className='button1' onClick={() => navigate("/updateread")}>Go Update Read Page</button>
     </div>
   );
 }
