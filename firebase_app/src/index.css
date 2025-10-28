@@ -4,3 +4,14 @@
   background-color: rosybrown;
 }
  
+.App {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.button {
+  font-family: 'Trebuchet MS';
+  background-color: aquamarine;
+  font-size: 19px;
+}
